@@ -1,0 +1,35 @@
+---
+title: "Readme"
+output: html_document
+---
+
+The tidy_data dataset includes mean measurements of a selection of variables and all rows from the Human Activity Recognition Using Smartphones Data Set. 
+
+This dataset included experiments with a group of 30 volunteers (19-48 years). Each volunteer performed each six activities (Walking, Walking_Upstairs, Walking_Dowstairs, Sitting, Standing and Laying) wearing a smartphone (Samsung Galaxy S II) on the waist. 
+
+Data was collected from the phone’s accelerometer and gyroscope capturing a 3-axial values for acceleration and angular velocity (x, y and z). 
+
+This data set was then divided into two smaller datasets: 70% of the values were split as a “training” data set while the remaining 30% were labelled “test” data set.
+
+More information on the smartphones data set can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+##### Combining training and test data sets
+
+
+Tidy_data was generated after a cleaning and getting data process according to the eponymous Coursera course. The code covered functions from packages such as R base, data.table and Dplyr to import and process data. 
+
+1. Load and combine the three failed which included the subjects, the activities and the measurements for both parts: the test and training data set. 
+
+2. The separate parts were cleaned and their names changed from the labels and features given in the original Samsung data set. 
+
+3. Then, separately, the data was combined to create two data sets (test and training) with their corresponding variables, variable values and row names (by activity and subject).  
+
+4. The test and training data sets were then combined again to create a single huge data set (of 563 variables and 10,299 observations) called “labelled_subset”, all correctly labelled and named. 
+
+#####Tidy_data data set
+
+1. Using Deplyr, a dataset was created to include all variables which had “std” or “mean” in their names, referring to mean and Standard deviation. 
+
+2. Finally, mean measurements for each variable per each subject were grouped using group_by() to create a neat data set called “tidy_data”.
+
+3. The tidy data set was saved as a txt file in the working directory
